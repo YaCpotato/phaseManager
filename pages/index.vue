@@ -24,16 +24,39 @@
           GitHub
         </a>
       </div>
+      {{ todos }}
     </div>
   </div>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
+import ToDo from '@/models/Todo'
 
 export default {
   components: {
     Logo
+  },
+  data(){
+    return{
+      todos:[],
+      data:[
+        {
+          title:'todo1'
+        },
+        {
+          title:'todo2'
+        }
+      ]
+    }
+  },
+  created:function(){
+    ToDo.insert({
+      data:this.data
+    })
+
+    this.todos = ToDo.api().fetch()
+    console.log(this.todos)
   }
 }
 </script>
