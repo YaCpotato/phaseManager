@@ -55,7 +55,7 @@ export default {
       data:this.data
     })
 
-    this.todos = ToDo.api().fetch()
+    this.todos = ToDo.api().get('http://127.0.0.1:8000/api/project')
     console.log(this.todos)
   }
 }
