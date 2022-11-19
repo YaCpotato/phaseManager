@@ -15,7 +15,7 @@
     "@nuxtjs/bulma": "^1.2.1",
     "@vuex-orm/core": "^0.33.0",
     "@vuex-orm/plugin-axios": "^0.9.0",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.15.8",
     "vuex": "^3.1.1"
   },
   "devDependencies": {}
